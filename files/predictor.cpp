@@ -35,6 +35,6 @@ int main(int argc, char** argv) {
 	}
 	sort(hugo.begin(), hugo.end(), two_less);
 	for (int a = 0; a < 10; a++) {
-    	cout << hugo[a].w << hugo[a].strength << endl;
+    	cout << hugo[a].w << endl;
 	}
 }
