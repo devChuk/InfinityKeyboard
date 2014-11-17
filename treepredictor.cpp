@@ -148,7 +148,7 @@ int main() {
     string swagger;
     cin >> swagger;
     for (int i = 0; i < swagger.length(); i++) {
-        cout << swagger.at(i) << endl;
+        // cout << swagger.at(i) << endl;
         attach(&begin, swagger.at(i));
     }
 
