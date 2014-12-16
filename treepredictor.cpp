@@ -1,3 +1,9 @@
+/*
+HOW CAN OPTIMIZE
+    kill off node combos that don't exist
+    binary search
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>

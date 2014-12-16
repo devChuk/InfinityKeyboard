@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>main.qml</file>
-        <file>gradient-background-7-1920x1080.jpg</file>
-    </qresource>
-</RCC>
