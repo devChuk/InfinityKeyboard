@@ -32,7 +32,8 @@ struct Errormessage {
 	string message;
 };
 
-class poo { //can't think of a class name. This is the class that takes words typed in a 1L format and returns a list of 10 predicted English words
+class poo { //can't think of a class name.
+//Takes words typed in a 1L format and returns 10 predicted English words
 public:
 	poo() { //initialize the head treeNode
 		head = new Node;
@@ -48,55 +49,57 @@ public:
 	        columnize(input.at(i));
 	    }
 	    genCombos(head, "");
+	    cleanCombos();
 	    for (int i = 0; i < combinations.size(); i++) {
 	        cout << combinations[i] << endl;
 	    }
+
 	}
 
-	void columnize(char s) {
+	void columnize(char s) {//converts single keypresses into the keypresses of the column
 	    if (s == 'q') {
 	        vector<string> n; n.push_back("q"); n.push_back("a"); n.push_back("z");
-	        insert(head, n);
+	        grow(head, n);
 	    }
 	    else if (s == 'w') {
 	        vector<string> n; n.push_back("w"); n.push_back("s"); n.push_back("x");
-	        insert(head, n);
+	        grow(head, n);
 	    }
 	    else if (s == 'e') {
 	        vector<string> n; n.push_back("e"); n.push_back("d"); n.push_back("c");
-	        insert(head, n);
+	        grow(head, n);
 	    }
 	    else if (s == 'r') {
 	        vector<string> n; n.push_back("r"); n.push_back("f"); n.push_back("v");
-	        insert(head, n);
+	        grow(head, n);
 	    }
 	    else if (s == 't') {
 	        vector<string> n; n.push_back("t"); n.push_back("g"); n.push_back("b");
-	        insert(head, n);
+	        grow(head, n);
 	    }
 	    else if (s == 'y') {
 	        vector<string> n; n.push_back("y"); n.push_back("h"); n.push_back("n");
-	        insert(head, n);
+	        grow(head, n);
 	    }
 	    else if (s == 'u') {
 	        vector<string> n; n.push_back("u"); n.push_back("j"); n.push_back("m");
-	        insert(head, n);
+	        grow(head, n);
 	    }
 	    else if (s == 'i') {
 	        vector<string> n; n.push_back("i"); n.push_back("k");
-	        insert(head, n);
+	        grow(head, n);
 	    }
 	    else if (s == 'o') {
 	        vector<string> n; n.push_back("o"); n.push_back("l");
-	        insert(head, n);
+	        grow(head, n);
 	    }
 	    else if (s == 'p') {
 	        vector<string> n; n.push_back("p");
-	        insert(head, n);
+	        grow(head, n);
 	    }
 	}
 
-    void insert(Node* root, vector<string> v) {
+    void grow(Node* root, vector<string> v) {//adds possible next chars to a tree
 	    // Base Case: Last node
 	    if (root->isEndOfString) {
 	    	for (int i = 0; i < v.size(); i++) {
@@ -108,12 +111,12 @@ public:
 	    else {
 	    	for (int i = 0; i < root->branches.size(); i++) {
 	    		if (root->branches[i] != NULL)
-	    			insert(root->branches[i], v);
+	    			grow(root->branches[i], v);
 	    	}
 	    }
 	}
-	//arr(&begin, "", ans);
-	void genCombos(Node* root, string seed) {
+
+	void genCombos(Node* root, string seed) {//converts the tree into possible words
 		// cout << seed << endl;
 		if (root->branches[0] != NULL) {
 		    combinations.push_back(seed+root->branches[0]->data);
@@ -129,30 +132,47 @@ public:
 		}
 	}
 
+	void cleanCombos() {//removes words that are not as long as the input
+	//remove the word combos that are smaller than the input 4 optimization
+		int cutoff = getTreeDepth();
+		vector<string> temp;
+		for (int i = 0; i < combinations.size(); i++) {
+	        if (combinations[i].length() == cutoff) {
+	            temp.push_back(combinations[i]);
+	        }
+		}
+		combinations = temp;
+	}
+
+	int getTreeDepth() {//returns the depth of the tree
+		int depth = 0;
+		Node* p = head;
+		while (!(p->isEndOfString)) {
+	        p = p->branches[0];
+	        depth++;
+	    }
+	    return depth;
+	}
+
 private:
 	Node* head;
 	vector<string> combinations;
 };
 
 int main() {
-	poo wordGuesser;
 	string input;
-
+	poo wordGuesser;
 
 	while (cin >> input) {
-		// cout << input << endl;
-		wordGuesser.insert(input);
 		if (input == "EXIT") {
 			cout << "Program ended" << endl;
 			break;
 		}
+		wordGuesser.insert(input);
 	}
 	/*
-	Steps of main functionu
-
-	1)create initial head
-	2)cin for word input
-	3)grow dat tree
-
+	TODO
+	===================
+	Create a destructor for wordGuesser
 	*/
 }
