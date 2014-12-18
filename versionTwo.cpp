@@ -223,3 +223,12 @@ int main() {
 		wordGuesser.reset();
 	}
 }
+/*
+TODO
+================
+Optimize
+	kill off nasty nonexistant treeNode combos that don't exist
+	binary search will be more hygenic
+		perhaps we can move new.txt into an array.
+		perhaps we can mark firstletterlocations
+*/
