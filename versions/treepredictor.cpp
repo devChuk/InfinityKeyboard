@@ -8,7 +8,7 @@ HOW CAN OPTIMIZE
 #include <vector>
 #include <string>
 #include <fstream>
-// #include <map>
+#include <iostream>
 #include <algorithm>
 // #include <cstring>
 using namespace std;
@@ -163,6 +163,10 @@ int main() {
 
     //prnt(&begin, 0);
     arr(&begin, "", ans);
+    // for (int i = 0; i < ans.size(); i++) {
+    //     cout << ans[i] << endl;
+    // }
+    
     int su = countDepth(&begin);
     vector<string> fin;
     for (int i = 0; i < ans.size(); i++) {

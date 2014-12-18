@@ -39,11 +39,17 @@ public:
 		head->data = "";
 		head->isEndOfString = 1;
 		head->branches.push_back(NULL);
+		head->branches.push_back(NULL);
+		head->branches.push_back(NULL);
 	}
 
 	void insert(const string input) { //takes in word at 1L format
 		for (int i = 0; i < input.length(); i++) {
 	        columnize(input.at(i));
+	    }
+	    genCombos(head, "");
+	    for (int i = 0; i < combinations.size(); i++) {
+	        cout << combinations[i] << endl;
 	    }
 	}
 
@@ -106,10 +112,26 @@ public:
 	    	}
 	    }
 	}
+	//arr(&begin, "", ans);
+	void genCombos(Node* root, string seed) {
+		// cout << seed << endl;
+		if (root->branches[0] != NULL) {
+		    combinations.push_back(seed+root->branches[0]->data);
+		    genCombos(root->branches[0], seed + root->branches[0]->data);
+		}
+		if (root->branches[1] != NULL) {
+		    combinations.push_back(seed+root->branches[1]->data);
+		    genCombos(root->branches[1], seed + root->branches[1]->data);
+		}
+		if (root->branches[2] != NULL) {
+		    combinations.push_back(seed+root->branches[2]->data);
+		    genCombos(root->branches[2], seed + root->branches[2]->data);
+		}
+	}
 
 private:
 	Node* head;
-	vector<string> output;
+	vector<string> combinations;
 };
 
 int main() {
@@ -118,7 +140,7 @@ int main() {
 
 
 	while (cin >> input) {
-		cout << input << endl;
+		// cout << input << endl;
 		wordGuesser.insert(input);
 		if (input == "EXIT") {
 			cout << "Program ended" << endl;
