@@ -208,6 +208,7 @@ public:
 private:
 	Node* head;
 	vector<string> combinations;
+	
 };
 
 int main() {
@@ -231,4 +232,5 @@ Optimize
 	binary search will be more hygenic
 		perhaps we can move new.txt into an array.
 		perhaps we can mark firstletterlocations
+			researching..
 */
