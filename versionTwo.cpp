@@ -160,9 +160,14 @@ public:
 
 	void reset() {
 		combinations.clear();
-		deleteNode(head->branches[0]);
-		deleteNode(head->branches[1]);
-		deleteNode(head->branches[2]);
+		if (head->branches[0]) {
+			deleteNode(head->branches[0]);
+			if (head->branches[1]) {
+				deleteNode(head->branches[1]);
+				if (head->branches[2])
+					deleteNode(head->branches[2]);
+			}
+		}
 		head = new Node;
 		head->data = "";
 		head->isEndOfString = 1;
@@ -200,9 +205,12 @@ public:
 		    }        
 		}
 		sort(hugo.begin(), hugo.end(), two_less);
-		for (int a = 0; a < 10; a++) {
-		    cout << hugo[a].w << " " << hugo[a].strength << endl;
-		}
+		if (hugo.size())
+			for (int a = 0; (a < 10 && a < hugo.size()); a++) {
+			    cout << hugo[a].w << " " << hugo[a].strength << endl;
+			}
+		else
+			cout << "not found" << endl;
 	}
 
 private:
@@ -223,6 +231,7 @@ int main() {
 		wordGuesser.insert(input);
 		wordGuesser.reset();
 	}
+	//return 0;
 }
 /*
 TODO
