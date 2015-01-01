@@ -137,7 +137,7 @@ public:
 	}
 
 	void cleanCombos() {//removes words that are not as long as the input
-	//remove the word combos that are smaller than the input 4 optimization
+						//remove the word combos that are smaller than the input 4 optimization
 		int cutoff = getTreeDepth();
 		vector<string> temp;
 		for (int i = 0; i < combinations.size(); i++) {
@@ -192,7 +192,6 @@ public:
 		for (int i = 0; i < combinations.size(); i++) {
 		    string input = combinations[i];
 		    ifstream ifs("new.txt");
-		    string s;
 		    string first;
 		    int last;
 		    while (ifs >> first >> last) {
