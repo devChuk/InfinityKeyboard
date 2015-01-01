@@ -3,7 +3,6 @@
 #include <string>
 #include <fstream>
 #include <algorithm>
-#include <exception>
 using namespace std;
 
 struct Node {
@@ -32,10 +31,6 @@ bool two_less(word const & a, word const & b)
 {
     return a.strength > b.strength;
 }
-
-struct Errormessage {
-	string message;
-};
 
 class poo { //can't think of a class name. I asked Lucy to think of one for me haha
 //Takes words typed in a 1L format and returns 10 predicted English words
