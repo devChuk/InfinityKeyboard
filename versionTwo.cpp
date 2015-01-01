@@ -233,11 +233,14 @@ int main() {
 		wordGuesser.insert(input);
 		wordGuesser.reset();
 	}
-	//return 0;
+	return 0;
 }
 /*
 TODO
 ================
-Optimize
-	kill off nasty nonexistant treeNode combos that don't exist
+Find a way to create a GUI. The wordPrediction is good enough for now
+	http://alleg.sourceforge.net/
+
+Optimize more
+	after GUI is created
 */
