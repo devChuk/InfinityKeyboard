@@ -191,9 +191,12 @@ public:
 		vector<word> hugo;
 		for (int i = 0; i < combinations.size(); i++) {
 		    string input = combinations[i];
-		    ifstream ifs("new.txt");
+		    string txt = ".txt";
+		    string folder = "./words/";
+		    ifstream ifs(folder + input[0] + txt); //access the file with the corresponding first letter of the word to search
 		    string first;
 		    int last;
+		    // cout << input << endl;
 		    while (ifs >> first >> last) {
 		        if (first.find(input) == 0) {
 		            word durr;
@@ -237,8 +240,4 @@ TODO
 ================
 Optimize
 	kill off nasty nonexistant treeNode combos that don't exist
-	binary search will be more hygenic
-		perhaps we can move new.txt into an array.
-		perhaps we can mark firstletterlocations
-			researching..
 */
