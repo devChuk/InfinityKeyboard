@@ -233,9 +233,9 @@ int main() {
 /*
 TODO
 ================
-Find a way to create a GUI. The wordPrediction is good enough for now
-	http://alleg.sourceforge.net/
+QT pls carry
 
-Optimize more
-	after GUI is created
+Have some sort of 'add-on' method. Keep in mind that I mean that at some point the prediction algorithm should stop predicting and start eliminating.
+
+
 */
