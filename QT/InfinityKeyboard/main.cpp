@@ -6,11 +6,11 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 //! [create, resize and show]
     QWidget window;
-    window.resize(320, 240);
+    window.resize(1920, 1080);
     window.show();
 //! [create, resize and show]
     window.setWindowTitle(
-        QApplication::translate("toplevel", "Top-level widget"));
+        QApplication::translate("toplevel", "Infinity Keyboard"));
     return app.exec();
 }
 //! [main program]
