@@ -1,13 +1,7 @@
-TEMPLATE = app
+QT += widgets
 
-QT += qml quick widgets
+SOURCES = main.cpp
 
-SOURCES += main.cpp
-
-RESOURCES += qml.qrc
-
-# Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH =
-
-# Default rules for deployment.
-include(deployment.pri)
+# install
+target.path = $$[QT_INSTALL_EXAMPLES]/widgets/tutorials/widgets/toplevel
+INSTALLS += target
