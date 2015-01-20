@@ -236,6 +236,4 @@ TODO
 QT pls carry
 
 Have some sort of 'add-on' method. Keep in mind that I mean that at some point the prediction algorithm should stop predicting and start eliminating.
-
-
 */
