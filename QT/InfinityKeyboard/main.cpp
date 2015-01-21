@@ -1,5 +1,6 @@
 //! [main program]
 #include <QtWidgets>
+#include <QLabel>
 
 int main(int argc, char *argv[])
 {
@@ -11,8 +12,13 @@ int main(int argc, char *argv[])
 //! [create, resize]
     window.setWindowTitle(
         QApplication::translate("toplevel", "Infinity Keyboard"));
-
-    window.setStyleSheet("background-image: url(/home/brian_chuk/Desktop/Projects/hackathons/InfinityKeyboard/gradientbg.jpg)"); //it works.
+//! [create background]
+    window.setStyleSheet("background-image: url(/home/brian_chuk/Desktop/Projects/hackathons/InfinityKeyboard/gradientbg.jpg)"); //eh. it works...
+//! [fancy title]
+    QLabel* durr = new QLabel("swag");
+    QVBoxLayout* layout = new QVBoxLayout();
+        layout->addWidget(durr);
+        window.setLayout(layout);
 
     return app.exec();
 }
