@@ -15,9 +15,15 @@ int main(int argc, char *argv[])
 //! [create background]
     window.setStyleSheet("background-image: url(/home/brian_chuk/Desktop/Projects/hackathons/InfinityKeyboard/gradientbg.jpg)"); //eh. it works...
 //! [fancy title]
-    QLabel* durr = new QLabel("swag");
+//!
+    QString labelText = "<P><b><i><FONT COLOR='#ff0000' FONT SIZE = 4>";
+    labelText.append("The Infinity Keyboard");
+    labelText.append("</i></b></P></br>");
+    QLabel* label = new QLabel();
+    label->setText(labelText);
+    //QLabel* durr = new QLabel("The Infinity Keyboard");
     QVBoxLayout* layout = new QVBoxLayout();
-        layout->addWidget(durr);
+        layout->addWidget(label);
         window.setLayout(layout);
 
     return app.exec();
