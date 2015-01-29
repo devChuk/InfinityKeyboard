@@ -14,3 +14,7 @@ BOOKMARK:
 http://lazyfoo.net/tutorials/SDL/01_hello_SDL/index2.php
 
 THANK YOU LAZYFOO :D
+
+GUI compile command:
+
+g++ PLACEHOLDER.cpp -w -lSDL2 -o Infin_KB
