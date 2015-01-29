@@ -12,4 +12,6 @@ THANK YOU LAZYFOO :D
 
 GUI compile command:
 
-g++ PLACEHOLDER.cpp -w -lSDL2 -o Infin_KB
+g++ GUI.cpp -w -lSDL2 -w -lSDL2_image -o GUI
+
+Requires SDL2 and SDL2_image and 10 fingers
