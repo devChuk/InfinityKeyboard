@@ -12,6 +12,6 @@ GUI compile command:
 
 g++ [LIST OF ALL SOURCE FILES] -w -lSDL2 -w -lSDL2_image -w -lSDL2_ttf -o run
 
-Yeah it's quite a mouthful
+Yeah it's quite a mouthful.
 
 Requires SDL2 and SDL2_image and SDL_ttf and 10 fingers
