@@ -1,40 +1,23 @@
-//SDL image needed
-
-//Using SDL and standard IO
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <stdio.h>
 
-//Screen dimension constants
 const int SCREEN_WIDTH = 1920;
 const int SCREEN_HEIGHT = 1080;
 
-//Starts up SDL and creates window
 bool init();
 
-//Loads media
 bool loadMedia();
 
-//Frees media and shuts down SDL
 void close();
 
-//The window we'll be rendering to
-SDL_Window* gWindow = NULL;
-	
-//The surface contained by the window
-SDL_Surface* gScreenSurface = NULL;
+SDL_Window* gWindow = NULL;			//The window we'll be rendering to		
+SDL_Surface* gScreenSurface = NULL;	//The surface contained by the window
+SDL_Surface* gHelloWorld = NULL;	//The image we will load and show on the screen
 
-//The image we will load and show on the screen
-SDL_Surface* gHelloWorld = NULL;
-
-bool init()
-{
-	//Initialization flag
-	bool success = true;
-
-	//Initialize SDL
-	if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
-	{
+bool init() {
+	bool success = true; 					//Initialization flag
+	if(SDL_Init(SDL_INIT_VIDEO) < 0) {	//Initialize SDL
 		printf( "SDL could not initialize! SDL_Error: %s\n", SDL_GetError() );
 		success = false;
 	}
