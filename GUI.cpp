@@ -1,6 +1,9 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
 #include <stdio.h>
+#include <string>
+#include <cmath>
 
 const int SCREEN_WIDTH = 1920;
 const int SCREEN_HEIGHT = 1080;
@@ -61,7 +64,7 @@ int main(int argc, char* args[]) {
 			printf("Failed to load media!\n");
 		}
 		else {
-			SDL_BlitSurface(gHelloWorld, NULL, gScreenSurface, NULL); //Apply the image
+			SDL_BlitSurface(gHelloWorld, NULL, gScreenSurface, NULL); 	//Apply the image
 			SDL_UpdateWindowSurface(gWindow);							//Update the surface
 			SDL_Delay(2000);
 		}
