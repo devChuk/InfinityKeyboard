@@ -16,6 +16,4 @@ Group compile command:
 
 g++ [list of all source files] -o [executableName]
 
-
-
 Requires SDL2 and SDL2_image and 10 fingers
