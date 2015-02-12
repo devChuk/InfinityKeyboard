@@ -63,7 +63,7 @@ bool loadMedia()
 	bool success = true;
 
 	//Load splash image
-	gHelloWorld = IMG_Load( "./gradientbg.jpg" );
+	gHelloWorld = IMG_Load( "./res/gradientbg.jpg" );
 	if( gHelloWorld == NULL )
 	{
 		printf( "Unable to load image %s! SDL Error: %s\n", "02_getting_an_image_on_the_screen/hello_world.bmp", SDL_GetError() );
