@@ -3,7 +3,7 @@ InfinityKeyboard
 
 A easy one-handed touchless keyboard with the LEAP motion
 
-Just run ./a.out to run the current version
+Just run ./run to run the current version
 
 Bookmark:
 http://lazyfoo.net/tutorials/SDL/03_event_driven_programming/index.php
