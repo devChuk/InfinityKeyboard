@@ -10,10 +10,8 @@ http://lazyfoo.net/tutorials/SDL/03_event_driven_programming/index.php
 
 GUI compile command:
 
-g++ GUI.cpp -w -lSDL2 -w -lSDL2_image -o GUI
+g++ [LIST OF ALL SOURCE FILES] -w -lSDL2 -w -lSDL2_image -w -lSDL2_ttf -o run
 
-Group compile command:
+Yeah it's quite a mouthful
 
-g++ [list of all source files] -o [executableName]
-
-Requires SDL2 and SDL2_image and 10 fingers
+Requires SDL2 and SDL2_image and SDL_ttf and 10 fingers
