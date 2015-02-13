@@ -28,6 +28,7 @@ predictor::predictor() {
 	head->branches.push_back(NULL);
 	head->branches.push_back(NULL);
 }
+
 predictor::~predictor() {
 	deleteNode(head);
 }
@@ -41,46 +42,70 @@ void predictor::insert(const string input) {
 }
 
 void predictor::columnize(char s) {
-    if (s == 'q') {
-        vector<string> n; n.push_back("q"); n.push_back("a"); n.push_back("z");
-        grow(head, n);
+	vector<string> n;
+    switch(s) {
+    	case 'q':
+    		n.push_back("q"); n.push_back("a"); n.push_back("z");
+    	break;
+    	case 'w':
+    		n.push_back("w"); n.push_back("s"); n.push_back("x");
+    	break;
+    	case 'e':
+    		n.push_back("e"); n.push_back("d"); n.push_back("c");
+    	break;
+    	case 'r':
+    		n.push_back("r"); n.push_back("f"); n.push_back("v");
+    	break;
+    	case 't':
+    		n.push_back("t"); n.push_back("g"); n.push_back("b");
+    	break;
+    	case 'y':
+    		n.push_back("y"); n.push_back("h"); n.push_back("n");
+    	break;
+    	case 'u':
+
+    	break;
+    	case 'i':
+
+    	break;
+    	case 'o':
+    	break;
+    	case 'p':
+    	break;
+
     }
-    else if (s == 'w') {
-        vector<string> n; n.push_back("w"); n.push_back("s"); n.push_back("x");
-        grow(head, n);
-    }
-    else if (s == 'e') {
-        vector<string> n; n.push_back("e"); n.push_back("d"); n.push_back("c");
-        grow(head, n);
-    }
-    else if (s == 'r') {
-        vector<string> n; n.push_back("r"); n.push_back("f"); n.push_back("v");
-        grow(head, n);
-    }
-    else if (s == 't') {
-        vector<string> n; n.push_back("t"); n.push_back("g"); n.push_back("b");
-        grow(head, n);
-    }
-    else if (s == 'y') {
-        vector<string> n; n.push_back("y"); n.push_back("h"); n.push_back("n");
-        grow(head, n);
-    }
-    else if (s == 'u') {
-        vector<string> n; n.push_back("u"); n.push_back("j"); n.push_back("m");
-        grow(head, n);
-    }
-    else if (s == 'i') {
-        vector<string> n; n.push_back("i"); n.push_back("k");
-        grow(head, n);
-    }
-    else if (s == 'o') {
-        vector<string> n; n.push_back("o"); n.push_back("l");
-        grow(head, n);
-    }
-    else if (s == 'p') {
-        vector<string> n; n.push_back("p");
-        grow(head, n);
-    }
+
+    // if (s == 'q') {
+    //     n.push_back("q"); n.push_back("a"); n.push_back("z");
+    // }
+    // else if (s == 'w') {
+    //     n.push_back("w"); n.push_back("s"); n.push_back("x");
+    // }
+    // else if (s == 'e') {
+    //     n.push_back("e"); n.push_back("d"); n.push_back("c");
+    // }
+    // else if (s == 'r') {
+    //     n.push_back("r"); n.push_back("f"); n.push_back("v");
+    // }
+    // else if (s == 't') {
+    //     n.push_back("t"); n.push_back("g"); n.push_back("b");
+    // }
+    // else if (s == 'y') {
+    //     n.push_back("y"); n.push_back("h"); n.push_back("n");
+    // }
+    // else if (s == 'u') {
+    //     n.push_back("u"); n.push_back("j"); n.push_back("m");
+    // }
+    // else if (s == 'i') {
+    //     n.push_back("i"); n.push_back("k");
+    // }
+    // else if (s == 'o') {
+    //     n.push_back("o"); n.push_back("l");
+    // }
+    // else if (s == 'p') {
+    //     n.push_back("p");
+    // }
+    grow(head, n);
 }
 
 void predictor::grow(Node* root, vector<string> v) {
