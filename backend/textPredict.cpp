@@ -63,48 +63,19 @@ void predictor::columnize(char s) {
     		n.push_back("y"); n.push_back("h"); n.push_back("n");
     	break;
     	case 'u':
-
+            n.push_back("u"); n.push_back("j"); n.push_back("m");
     	break;
     	case 'i':
-
+            n.push_back("i"); n.push_back("k");
     	break;
     	case 'o':
+            n.push_back("o"); n.push_back("l");
     	break;
     	case 'p':
+            n.push_back("p");
     	break;
 
     }
-
-    // if (s == 'q') {
-    //     n.push_back("q"); n.push_back("a"); n.push_back("z");
-    // }
-    // else if (s == 'w') {
-    //     n.push_back("w"); n.push_back("s"); n.push_back("x");
-    // }
-    // else if (s == 'e') {
-    //     n.push_back("e"); n.push_back("d"); n.push_back("c");
-    // }
-    // else if (s == 'r') {
-    //     n.push_back("r"); n.push_back("f"); n.push_back("v");
-    // }
-    // else if (s == 't') {
-    //     n.push_back("t"); n.push_back("g"); n.push_back("b");
-    // }
-    // else if (s == 'y') {
-    //     n.push_back("y"); n.push_back("h"); n.push_back("n");
-    // }
-    // else if (s == 'u') {
-    //     n.push_back("u"); n.push_back("j"); n.push_back("m");
-    // }
-    // else if (s == 'i') {
-    //     n.push_back("i"); n.push_back("k");
-    // }
-    // else if (s == 'o') {
-    //     n.push_back("o"); n.push_back("l");
-    // }
-    // else if (s == 'p') {
-    //     n.push_back("p");
-    // }
     grow(head, n);
 }
 
